@@ -15,7 +15,10 @@ class TodoListTest extends TestCase
     public function test_fetch_todo_list()
     {
 
-      TodoList::create(['name'=>'my list']);
+        TodoList::factory()->create();
+      
+
+      //TodoList::create(['name'=>'my list']);
         //dd(route('todo-list.store'));
         $response = $this->getJson(route('todo-list.store'));
         //response not json data so add json()
